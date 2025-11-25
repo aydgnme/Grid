@@ -19,10 +19,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install Trunk CLI
+        run: |
+          curl -fsSL https://get.trunk.io | bash -s -- -y
+
       - name: Trunk Check
-        uses: trunk-io/trunk-action@v1
-        with:
-          arguments: check --ci --ci-progress
+        run: trunk check --ci --ci-progress
         # Trunk handles: lint, format, security checks
 
   build-test:
