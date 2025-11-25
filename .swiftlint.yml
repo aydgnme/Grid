@@ -7,7 +7,7 @@ included:
 
 excluded:
   - .build
-  - Test
+  - Tests
   - Scripts
   - Grid.xcodeproj
   - .trunk
@@ -49,4 +49,3 @@ file_length:
 
 # Reporter type
 reporter: "xcode"
-

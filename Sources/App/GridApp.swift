@@ -9,8 +9,10 @@ import SwiftUI
 
 @main
 struct GridApp: App {
+    @StateObject private var hotkeys = HotKeyManager()
+
     var body: some Scene {
-        WindowGroup {
+        MenuBarExtra("Grid", systemImage: "rectangle.split.3x1") {
             ContentView()
         }
     }
