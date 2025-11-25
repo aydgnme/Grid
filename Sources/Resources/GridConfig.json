@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "grid": {
+    "defaultSize": 2,
+    "minSize": 1,
+    "maxSize": 4
+  },
+  "shortcuts": {
+    "snapLeft": {
+      "key": "left",
+      "modifiers": ["command"]
+    },
+    "snapRight": {
+      "key": "right",
+      "modifiers": ["command"]
+    },
+    "snapUp": {
+      "key": "up",
+      "modifiers": ["command"]
+    },
+    "snapDown": {
+      "key": "down",
+      "modifiers": ["command"]
+    }
+  },
+  "animations": {
+    "enabled": true,
+    "duration": 0.3
+  }
+}

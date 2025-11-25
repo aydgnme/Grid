@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  Grid
+
+  Created by Mert Aydogan on 25.11.2025.
+*/
+
+/* Settings */
+"settings.title" = "Settings";
+"settings.grid.enable" = "Enable Snap to Grid";
+"settings.shortcuts.title" = "Shortcuts";
+
+/* Menu */
+"menu.settings" = "Settings...";
+"menu.quit" = "Quit Grid";
+
+/* Window Actions */
+"window.snap.left" = "Snap Left";
+"window.snap.right" = "Snap Right";
+"window.snap.up" = "Snap Up";
+"window.snap.down" = "Snap Down";
+
+/* Accessibility */
+"accessibility.title" = "Accessibility Permission Required";
+"accessibility.message" = "Grid needs accessibility permissions to manage windows on your Mac.";
+"accessibility.openSettings" = "Open System Settings";
+"accessibility.cancel" = "Cancel";
+

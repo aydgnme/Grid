@@ -6,19 +6,39 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DC5553052ED654AC0046E1CA /* SettingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5552FD2ED654AC0046E1CA /* SettingsUITests.swift */; };
+		DC5553062ED654AC0046E1CA /* WindowManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5553022ED654AC0046E1CA /* WindowManagerTests.swift */; };
+		DC5553072ED654AC0046E1CA /* CGRectSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5552FF2ED654AC0046E1CA /* CGRectSplitTests.swift */; };
+		DC5553082ED654AC0046E1CA /* MenuBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5552FC2ED654AC0046E1CA /* MenuBarUITests.swift */; };
+		DC5553092ED654AC0046E1CA /* PreferencesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5553002ED654AC0046E1CA /* PreferencesServiceTests.swift */; };
+		DC55530E2ED656940046E1CA /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = DC55530D2ED656940046E1CA /* HotKey */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC5552BC2ED64C1E0046E1CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC5552402ED63F680046E1CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC5552472ED63F680046E1CA;
+			remoteInfo = Grid;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DC5552482ED63F680046E1CA /* Grid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5552B82ED64C1E0046E1CA /* Test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC5552FC2ED654AC0046E1CA /* MenuBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarUITests.swift; sourceTree = "<group>"; };
+		DC5552FD2ED654AC0046E1CA /* SettingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUITests.swift; sourceTree = "<group>"; };
+		DC5552FF2ED654AC0046E1CA /* CGRectSplitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectSplitTests.swift; sourceTree = "<group>"; };
+		DC5553002ED654AC0046E1CA /* PreferencesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesServiceTests.swift; sourceTree = "<group>"; };
+		DC5553022ED654AC0046E1CA /* WindowManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		DC55524A2ED63F680046E1CA /* Sources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		DC5552622ED641140046E1CA /* Test */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Test;
 			sourceTree = "<group>";
 		};
 		DC5552632ED641270046E1CA /* Scripts */ = {
@@ -38,6 +58,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC55530E2ED656940046E1CA /* HotKey in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC5552B52ED64C1E0046E1CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +79,7 @@
 				DC5552632ED641270046E1CA /* Scripts */,
 				DC55524A2ED63F680046E1CA /* Sources */,
 				DC5552492ED63F680046E1CA /* Products */,
-				DC5552622ED641140046E1CA /* Test */,
+				DC5553042ED654AC0046E1CA /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,8 +87,37 @@
 			isa = PBXGroup;
 			children = (
 				DC5552482ED63F680046E1CA /* Grid.app */,
+				DC5552B82ED64C1E0046E1CA /* Test.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DC5552FE2ED654AC0046E1CA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DC5552FC2ED654AC0046E1CA /* MenuBarUITests.swift */,
+				DC5552FD2ED654AC0046E1CA /* SettingsUITests.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DC5553032ED654AC0046E1CA /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				DC5552FF2ED654AC0046E1CA /* CGRectSplitTests.swift */,
+				DC5553002ED654AC0046E1CA /* PreferencesServiceTests.swift */,
+				DC5553022ED654AC0046E1CA /* WindowManagerTests.swift */,
+			);
+			path = Unit;
+			sourceTree = "<group>";
+		};
+		DC5553042ED654AC0046E1CA /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DC5552FE2ED654AC0046E1CA /* UI */,
+				DC5553032ED654AC0046E1CA /* Unit */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,16 +137,36 @@
 			);
 			fileSystemSynchronizedGroups = (
 				DC55524A2ED63F680046E1CA /* Sources */,
-				DC5552622ED641140046E1CA /* Test */,
 				DC5552632ED641270046E1CA /* Scripts */,
 				DC5552642ED641400046E1CA /* .github */,
 			);
 			name = Grid;
 			packageProductDependencies = (
+				DC55530D2ED656940046E1CA /* HotKey */,
 			);
 			productName = Grid;
 			productReference = DC5552482ED63F680046E1CA /* Grid.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DC5552B72ED64C1E0046E1CA /* Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC5552BE2ED64C1E0046E1CA /* Build configuration list for PBXNativeTarget "Test" */;
+			buildPhases = (
+				DC5552B42ED64C1E0046E1CA /* Sources */,
+				DC5552B52ED64C1E0046E1CA /* Frameworks */,
+				DC5552B62ED64C1E0046E1CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC5552BD2ED64C1E0046E1CA /* PBXTargetDependency */,
+			);
+			name = Test;
+			packageProductDependencies = (
+			);
+			productName = Test;
+			productReference = DC5552B82ED64C1E0046E1CA /* Test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -104,6 +181,10 @@
 					DC5552472ED63F680046E1CA = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
+					DC5552B72ED64C1E0046E1CA = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = DC5552472ED63F680046E1CA;
+					};
 				};
 			};
 			buildConfigurationList = DC5552432ED63F680046E1CA /* Build configuration list for PBXProject "Grid" */;
@@ -115,18 +196,29 @@
 			);
 			mainGroup = DC55523F2ED63F680046E1CA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DC55530C2ED656940046E1CA /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DC5552492ED63F680046E1CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DC5552472ED63F680046E1CA /* Grid */,
+				DC5552B72ED64C1E0046E1CA /* Test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DC5552462ED63F680046E1CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC5552B62ED64C1E0046E1CA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -143,7 +235,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC5552B42ED64C1E0046E1CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC5553052ED654AC0046E1CA /* SettingsUITests.swift in Sources */,
+				DC5553062ED654AC0046E1CA /* WindowManagerTests.swift in Sources */,
+				DC5553072ED654AC0046E1CA /* CGRectSplitTests.swift in Sources */,
+				DC5553082ED654AC0046E1CA /* MenuBarUITests.swift in Sources */,
+				DC5553092ED654AC0046E1CA /* PreferencesServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC5552BD2ED64C1E0046E1CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC5552472ED63F680046E1CA /* Grid */;
+			targetProxy = DC5552BC2ED64C1E0046E1CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DC5552512ED63F6A0046E1CA /* Debug */ = {
@@ -280,6 +392,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Grid;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,6 +426,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Grid;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -327,6 +443,46 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DC5552BF2ED64C1E0046E1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8YP6GH5LF7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aydgn.Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Grid";
+			};
+			name = Debug;
+		};
+		DC5552C02ED64C1E0046E1CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8YP6GH5LF7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.aydgn.Test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Grid";
 			};
 			name = Release;
 		};
@@ -351,7 +507,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DC5552BE2ED64C1E0046E1CA /* Build configuration list for PBXNativeTarget "Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC5552BF2ED64C1E0046E1CA /* Debug */,
+				DC5552C02ED64C1E0046E1CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DC55530C2ED656940046E1CA /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DC55530D2ED656940046E1CA /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DC55530C2ED656940046E1CA /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DC5552402ED63F680046E1CA /* Project object */;
 }
