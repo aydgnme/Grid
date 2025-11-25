@@ -1,0 +1,35 @@
+# SwiftFormat Configuration for Grid Project
+# https://github.com/nicklockwood/SwiftFormat
+
+# File options
+--exclude .build,Test,Scripts,Grid.xcodeproj,.trunk
+
+# Formatting options
+--indent 4
+--tabwidth 4
+--maxwidth 120
+--wraparguments before-first
+--wrapcollections before-first
+--closingparen balanced
+--commas always
+--decimalgrouping 3,4
+--binarygrouping 4,8
+--octalgrouping 4,8
+--hexgrouping 4,8
+--fractiongrouping disabled
+--exponentgrouping disabled
+--semicolons never
+--trimwhitespace always
+--insertlines true
+--removelines true
+--allman false
+--indentcase false
+--indentstrings false
+--xcodeindentation true
+--self insert
+--selfrequired ["ViewController", "View"]
+--extensionacl on-declarations
+--nospaceoperators ...,..<
+--ranges spaced
+--operatorfunc spaced
+

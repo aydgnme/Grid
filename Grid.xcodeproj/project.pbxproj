@@ -11,9 +11,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DC55524A2ED63F680046E1CA /* Grid */ = {
+		DC55524A2ED63F680046E1CA /* Sources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Grid;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -32,7 +32,7 @@
 		DC55523F2ED63F680046E1CA = {
 			isa = PBXGroup;
 			children = (
-				DC55524A2ED63F680046E1CA /* Grid */,
+				DC55524A2ED63F680046E1CA /* Sources */,
 				DC5552492ED63F680046E1CA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				DC55524A2ED63F680046E1CA /* Grid */,
+				DC55524A2ED63F680046E1CA /* Sources */,
 			);
 			name = Grid;
 			packageProductDependencies = (

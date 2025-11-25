@@ -1,0 +1,8 @@
+# Files and directories to ignore for Trunk checks
+.trunk/**
+.github/**
+Grid.xcodeproj/**
+Test/**
+Scripts/**
+Sources/Resources/**
+
