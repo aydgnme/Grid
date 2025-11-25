@@ -1,0 +1,67 @@
+name: Grid CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  trunk-check:
+    name: Trunk Check (Lint, Format, Security)
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Trunk CLI
+        run: |
+          brew install trunk
+
+      - name: Run Trunk Check
+        run: trunk check --ci
+        # Trunk handles: lint, format, security checks
+
+  build-test:
+    name: Build & Test
+    runs-on: macos-latest
+    needs: trunk-check
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: "16.0"
+
+      - name: Build
+        run: |
+          xcodebuild -project Grid.xcodeproj \
+                     -scheme Grid \
+                     -configuration Debug \
+                     -sdk macosx \
+                     build | xcpretty
+
+      - name: Run Tests
+        run: |
+          xcodebuild test -project Grid.xcodeproj \
+                          -scheme Grid \
+                          -destination 'platform=macOS' \
+                          -enableCodeCoverage YES | xcpretty
+
+      - name: Generate Coverage Report
+        if: success()
+        run: |
+          xcodebuild test -project Grid.xcodeproj \
+                          -scheme Grid \
+                          -destination 'platform=macOS' \
+                          -enableCodeCoverage YES \
+                          -derivedDataPath ./build
+          # Coverage data will be available in build/Logs/Test/

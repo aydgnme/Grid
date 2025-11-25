@@ -16,6 +16,21 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		DC5552622ED641140046E1CA /* Test */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Test;
+			sourceTree = "<group>";
+		};
+		DC5552632ED641270046E1CA /* Scripts */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		DC5552642ED641400046E1CA /* .github */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = .github;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,8 +47,11 @@
 		DC55523F2ED63F680046E1CA = {
 			isa = PBXGroup;
 			children = (
+				DC5552642ED641400046E1CA /* .github */,
+				DC5552632ED641270046E1CA /* Scripts */,
 				DC55524A2ED63F680046E1CA /* Sources */,
 				DC5552492ED63F680046E1CA /* Products */,
+				DC5552622ED641140046E1CA /* Test */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +80,9 @@
 			);
 			fileSystemSynchronizedGroups = (
 				DC55524A2ED63F680046E1CA /* Sources */,
+				DC5552622ED641140046E1CA /* Test */,
+				DC5552632ED641270046E1CA /* Scripts */,
+				DC5552642ED641400046E1CA /* .github */,
 			);
 			name = Grid;
 			packageProductDependencies = (
