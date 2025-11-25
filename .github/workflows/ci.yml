@@ -19,12 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Trunk CLI
-        run: |
-          brew install trunk
-
-      - name: Run Trunk Check
-        run: trunk check --ci
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1
+        with:
+          arguments: check --all --ci --ci-progress
         # Trunk handles: lint, format, security checks
 
   build-test:
