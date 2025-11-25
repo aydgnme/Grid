@@ -26,6 +26,12 @@ jobs:
           curl -fsSL https://get.trunk.io | bash -s -- -y
           echo "$HOME/.local/bin" >> $GITHUB_PATH
 
+      - name: Install ShellCheck
+        run: |
+          if ! command -v shellcheck &> /dev/null; then
+            brew install shellcheck
+          fi
+
       - name: Trunk Check
         run: |
           export PATH="$HOME/.local/bin:$PATH"
