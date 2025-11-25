@@ -49,6 +49,9 @@ jobs:
         with:
           xcode-version: "16.0"
 
+      - name: Install xcpretty
+        run: gem install xcpretty
+
       - name: Build
         run: |
           xcodebuild -project Grid.xcodeproj \
