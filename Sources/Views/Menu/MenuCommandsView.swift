@@ -9,7 +9,13 @@ import SwiftUI
 
 struct MenuCommandsView: View {
     var body: some View {
-        EmptyView()
+        VStack(alignment: .leading, spacing: 6) {
+            Text("⌃⌥←  Move Left")
+            Text("⌃⌥→  Move Right")
+            Text("⌃⌥↑  Move Up")
+            Text("⌃⌥↓  Move Down")
+        }
+        .font(.caption)
     }
 }
 

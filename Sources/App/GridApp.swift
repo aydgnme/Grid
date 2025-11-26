@@ -10,10 +10,18 @@ import SwiftUI
 @main
 struct GridApp: App {
     @StateObject private var hotkeys = HotKeyManager()
+    @StateObject private var menuBarViewModel = MenuBarViewModel()
 
     var body: some Scene {
         MenuBarExtra("Grid", systemImage: "rectangle.split.3x1") {
-            ContentView()
+            MenuBarView(viewModel: self.menuBarViewModel)
         }
+
+        WindowGroup("Preferences", id: "preferences") {
+            SettingsView()
+        }
+        .windowStyle(.hiddenTitleBar)
+        .windowResizability(.contentSize)
+        .defaultSize(width: 320, height: 220)
     }
 }
